@@ -106,6 +106,10 @@ public class UniqueChars {
      */
     public static boolean isUniqueChars4(String str)
     {
+        if (str.length() == 0) {
+            return true;
+        }
+
         Set<Character> used = new HashSet<Character>();
 
         for (Character c : str.toCharArray()) {
