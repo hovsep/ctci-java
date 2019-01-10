@@ -2,3 +2,5 @@
 *.iml
 *.MF
 pom.xml
+/out
+/target
