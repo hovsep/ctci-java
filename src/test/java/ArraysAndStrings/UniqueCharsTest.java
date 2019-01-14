@@ -11,7 +11,6 @@ class UniqueCharsTest {
         assertTrue(UniqueChars.isUniqueChars(""));
         assertTrue(UniqueChars.isUniqueChars("abc"));
         assertFalse(UniqueChars.isUniqueChars("aabc"));
-        //assertFalse(UniqueChars.isUniqueChars("аабвг"));
     }
 
 
