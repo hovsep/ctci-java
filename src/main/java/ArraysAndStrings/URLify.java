@@ -10,8 +10,6 @@ package ArraysAndStrings;
  */
 public class URLify {
 
-    private static final char SPACE = " ".charAt(0);
-
     /**
      * Brute force solution
      */
@@ -22,7 +20,7 @@ public class URLify {
         for (int i = 0; i < input.length; i++) {
             currentChar = input[i];
 
-            if (currentChar == SPACE) {
+            if (currentChar == ' ') {
                 //Shift rest string
                 for (int j = l - 1; j > i; j--) {
                     input[j+2] = input[j];
