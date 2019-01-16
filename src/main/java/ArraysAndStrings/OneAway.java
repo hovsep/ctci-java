@@ -11,7 +11,7 @@ public class OneAway {
 
     public static boolean isOneEditAway(String s1, String s2)
     {
-        if (Math.abs(s1.length() - s2.length()) > 2) {
+        if (Math.abs(s1.length() - s2.length()) > 1) {
             return false;
         }
 

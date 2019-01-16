@@ -15,5 +15,6 @@ class OneAwayTest {
         assertTrue(OneAway.isOneEditAway("pales", "paes"));
         assertTrue(OneAway.isOneEditAway("pawe", "pave"));
         assertFalse(OneAway.isOneEditAway("paxye", "pamne"));
+        assertFalse(OneAway.isOneEditAway("paa", "paakan"));
     }
 }
