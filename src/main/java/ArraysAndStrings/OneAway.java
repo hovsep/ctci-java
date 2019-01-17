@@ -11,12 +11,12 @@ public class OneAway {
 
     public static boolean isOneEditAway(String s1, String s2)
     {
-        if (Math.abs(s1.length() - s2.length()) > 1) {
-            return false;
-        }
-
         if (s1.equals(s2)) {
             return true;
+        }
+
+        if (Math.abs(s1.length() - s2.length()) > 1) {
+            return false;
         }
 
         char[] s1Chars = s1.toCharArray();
