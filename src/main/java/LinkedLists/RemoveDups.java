@@ -12,17 +12,18 @@ import java.util.HashSet;
 public class RemoveDups {
 
     public static void main(String[] args) {
-        MyLinkedListNode n8 = new MyLinkedListNode(6, null);
-        MyLinkedListNode n7 = new MyLinkedListNode(6, n8);
+        MyLinkedListNode n8 = new MyLinkedListNode(5, null);
+        MyLinkedListNode n7 = new MyLinkedListNode(2, n8);
         MyLinkedListNode n6 = new MyLinkedListNode(5, n7);
         MyLinkedListNode n5 = new MyLinkedListNode(4, n6);
-        MyLinkedListNode n4 = new MyLinkedListNode(4, n5);
-        MyLinkedListNode n3 = new MyLinkedListNode(3, n4);
-        MyLinkedListNode n2 = new MyLinkedListNode(3, n3);
+        MyLinkedListNode n4 = new MyLinkedListNode(3, n5);
+        MyLinkedListNode n3 = new MyLinkedListNode(2, n4);
+        MyLinkedListNode n2 = new MyLinkedListNode(2, n3);
         MyLinkedListNode n1 = new MyLinkedListNode(1, n2);
 
         System.out.println("Before: " + n1.toString());
-        System.out.println("After:  " + RemoveDups.removeDups2(n1).toString());
+        System.out.println("After1: " + RemoveDups.removeDups(n1).toString());
+        System.out.println("After2: " + RemoveDups.removeDups2(n1).toString());
     }
 
     /**
@@ -37,24 +38,21 @@ public class RemoveDups {
         MyLinkedListNode previous = n;
         HashSet items = new HashSet<Integer>();
 
-        do {
+        while (null != n) {
+
             if (items.contains(n.data)) {
                 //remove item from list
                 previous.next = n.next;
+
             } else {
                 //add to hash map
                 items.add(n.data);
+                previous = n;
             }
 
-            previous = n;
+
             n = n.next;
-
-            if (null == n) {
-                break;
-            }
-
-        } while (true);
-
+        }
 
         return head;
     }

@@ -39,7 +39,8 @@ class RemoveDupsTest {
 
     @Test
     public void checkWithDuplicates() {
-        MyLinkedListNode n7 = new MyLinkedListNode(5, null);
+        MyLinkedListNode n8 = new MyLinkedListNode(5, null);
+        MyLinkedListNode n7 = new MyLinkedListNode(2, n8);
         MyLinkedListNode n6 = new MyLinkedListNode(5, n7);
         MyLinkedListNode n5 = new MyLinkedListNode(4, n6);
         MyLinkedListNode n4 = new MyLinkedListNode(3, n5);
