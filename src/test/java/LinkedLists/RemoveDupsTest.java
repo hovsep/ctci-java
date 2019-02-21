@@ -34,6 +34,7 @@ class RemoveDupsTest {
         MyLinkedListNode m1 = new MyLinkedListNode(1, m2);
 
         assertEquals(RemoveDups.removeDups(n1).toString(), RemoveDups.removeDups(m1).toString());
+        assertEquals(RemoveDups.removeDups2(n1).toString(), RemoveDups.removeDups(m1).toString());
     }
 
     @Test
@@ -54,5 +55,6 @@ class RemoveDupsTest {
         MyLinkedListNode m1 = new MyLinkedListNode(1, m2);
 
         assertEquals(RemoveDups.removeDups(n1).toString(), m1.toString());
+        assertEquals(RemoveDups.removeDups2(n1).toString(), m1.toString());
     }
 }
