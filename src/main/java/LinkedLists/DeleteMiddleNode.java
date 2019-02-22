@@ -11,6 +11,11 @@ package LinkedLists;
  */
 public class DeleteMiddleNode {
 
+    /**
+     * Brutforce solution
+     *
+     * @param nodeToDelete
+     */
     public static void deleteMiddleNode(MyLinkedListNode nodeToDelete)
     {
         MyLinkedListNode current = nodeToDelete;
@@ -25,5 +30,17 @@ public class DeleteMiddleNode {
             current = current.next;
         }
 
+    }
+
+    public static void deleteMiddleNode2(MyLinkedListNode nodeToDelete)
+    {
+        if (null != nodeToDelete.next) {
+
+            MyLinkedListNode next = nodeToDelete.next;
+
+            //Copy data from next
+            nodeToDelete.data = next.data;
+            nodeToDelete.next = next.next;
+        }
     }
 }
