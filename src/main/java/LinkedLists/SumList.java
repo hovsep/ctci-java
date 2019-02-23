@@ -134,6 +134,6 @@ public class SumList {
             }
         }
 
-            return resultHead;
+        return resultHead;
     }
 }
